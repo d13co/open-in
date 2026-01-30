@@ -1,0 +1,50 @@
+{
+  "name": "@d13co/open-in",
+  "version": "0.1.0",
+  "description": "Algorand Explorer and dApp registry for redirects. Open addresses, txns, assets, apps, and more in your favorite explorer or dApp browser.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint src --ext .ts && node scripts/check-esm-imports.cjs",
+    "lint:fix": "eslint src --fix --ext .ts",
+    "check-esm": "node scripts/check-esm-imports.cjs",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d13co/open-in.git"
+  },
+  "author": "D13",
+  "license": "MIT",
+  "keywords": [
+    "algorand",
+    "explorer",
+    "open-in"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@8.15.5"
+}

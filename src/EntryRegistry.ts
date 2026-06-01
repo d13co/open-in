@@ -4,6 +4,7 @@ import { Flow } from './Entries/Flow.js';
 import { Lora } from './Entries/Lora.js';
 import { Pera } from './Entries/Pera.js';
 import { OpenInEntry } from './AbstractOpenInEntry.js';
+import { ASAStats } from './Entries/ASAStats.js';
 
 export const EntryRegistry: OpenInEntry[] = [
   new Allo(),
@@ -12,4 +13,5 @@ export const EntryRegistry: OpenInEntry[] = [
   new AlgoSurf(),
 
   new Flow(),
+  new ASAStats(),
 ];

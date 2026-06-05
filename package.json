@@ -1,6 +1,6 @@
 {
   "name": "@d13co/open-in",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Algorand Explorer and dApp registry for redirects. Open addresses, txns, assets, apps, and more in your favorite explorer or dApp browser.",
   "type": "module",
   "main": "dist/index.js",

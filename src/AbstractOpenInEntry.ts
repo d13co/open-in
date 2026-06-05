@@ -39,9 +39,6 @@ export abstract class OpenInEntry {
     }
     let suffix = this.pageTypeSuffixMap.get(pageType)!; // checked by supportsPageType
     // support arbitrary slash prefix/suffix here
-    if (suffix.startsWith('/')) {
-      suffix = suffix.slice(1);
-    }
     if (suffix.endsWith('/')) {
       suffix = suffix.slice(0, -1);
     }
@@ -49,6 +46,9 @@ export abstract class OpenInEntry {
       suffix = `${suffix.replace('{id}', id)}`;
     } else {
       suffix = `${suffix}/${id}`;
+    }
+    if (suffix.startsWith('/')) {
+      suffix = suffix.slice(1);
     }
     return `${baseUrl}/${suffix}`;
   }
